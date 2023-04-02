@@ -11,14 +11,14 @@ let currentOperation = ''
 allClear()
 
 // Clear the calculator
-function allClear() {
+function allClear () {
   currentOperand.textContent = ''
   previousOperand.textContent = ''
   currentOperation = ''
 }
 
 // Append number to screen when number button pressed
-function appendNumber(number) {
+function appendNumber (number) {
   if (number === '.' && currentOperand.textContent.includes('.')) {
     return
   }
@@ -30,7 +30,7 @@ function appendNumber(number) {
 }
 
 // Update operation
-function updateOperation(operation) {
+function updateOperation (operation) {
   currentOperation = operation
   if (currentOperand.textContent !== '' && previousOperand.textContent !== '') {
     return
@@ -42,7 +42,7 @@ function updateOperation(operation) {
 }
 
 // Perform calculation and update display
-function calculate() {
+function calculate () {
   let result = ''
   const b = Number(currentOperand.textContent)
   const a = Number(previousOperand.textContent)
@@ -71,7 +71,7 @@ function calculate() {
 }
 
 // Change the sign of currentOperand
-function changeSign() {
+function changeSign () {
   const b = Number(currentOperand.textContent)
   if (b >= 0) {
     currentOperand.textContent = '-' + currentOperand.textContent
